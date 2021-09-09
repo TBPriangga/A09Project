@@ -1,0 +1,103 @@
+@media all and (max-width: 1000px) {
+    .fighter {
+        width: calc(100% / 4);
+    }
+}
+
+@media all and (min-width: 680px) {
+    .header-list {
+        position: unset;
+        transform: translateX(0);
+        box-shadow: unset;
+        float: right;
+    }
+
+    button#hamburgerButton {
+        display: none;
+    }
+}
+
+@media all and (max-width: 680px) {
+    .header-list {
+        flex-direction: column;
+        width: 80%;
+        height: 110vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-list ul li {
+        float: unset;
+        display: block;
+        text-align: center;
+    }
+
+    .fighter {
+        width: calc(100% / 1);
+    }
+
+    .jumbotron img {
+        width: 100%;
+    }
+
+    .jumbotron h1 {
+        font-size: 2rem;
+        padding: 15px;
+        width: 100%;
+    }
+
+    #exploreBtn {
+      margin-left: 15px;
+    }
+
+    #exploreBtnHide {
+      display: none;
+    }
+
+    footer#about {
+        flex-direction: column;
+    }
+
+    .footer-content-left {
+        border-right: none;
+        margin-bottom: 25px;
+    }
+
+    .footer-content-left, .footer-content-right {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .fighter {
+        width: calc(100% / 1);
+    }
+
+    section#faq img {
+      height: 250px;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .fighter {
+        width: calc(100% / 1);
+    }
+
+    section#faq img {
+      height: 230px;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .fighter {
+        width: calc(100% / 1);
+    }
+
+    section#faq img {
+      height: 200px;
+    }
+
+    .footer-content-left p {
+      font-size: 13px;
+    }
+}

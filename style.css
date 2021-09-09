@@ -1,0 +1,370 @@
+:root {
+  --head-color: #CEE5D0;
+  --content-color: #F3F0D7;
+  --footer-color: #F7D59C;
+  --common-color: #5E454B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Calibri', sans-serif;
+  background-color: #fff;
+}
+
+/* Bagian Header, Tulis codenya dibawah */
+li {
+  list-style: none;
+}
+header {
+  background-color: var(--head-color);
+  color: #000000;
+  height: 90px;
+  position : sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 5px #B3D8CB;
+}
+.header-logo {
+height: 90px;
+float: left;
+cursor: pointer;
+}
+.header-logo img {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  box-shadow: 0 3px #B3D8CB;
+}
+.header-list li{
+  padding: 33px 20px;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.header-list a {
+  text-decoration: none;
+  color: #000000;
+}
+.header-list li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: var(--common-color);
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  transition: 0.5s;
+}
+.header-list li:hover::after {
+  width: 100%;
+}
+
+.header-list {
+  background-color: var(--head-color);
+  align-items: center;
+  top: 0;
+  left: 0;
+  transform: translateX(-450px);
+  position: absolute;
+  display: flex;
+  transition: .3s ease;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+}
+
+.header-list.show {
+  transform: translateX(0);
+}
+
+button#hamburgerButton {
+  padding: 21px;
+  margin-top: 10px;
+  display: block;
+  color: black;
+  font-weight: bolder;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  float: right;
+}
+
+/* Bagian Main / Jumbotron, Tulis codenya dibawah */
+.jumbotron {
+  width: 100%;
+  display: flex;
+  height: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.jumbotron h1 {
+  width: 50%;
+  font-size: 3rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.jumbotron span {
+  color: #ff0000;
+  padding: 20px;
+}
+
+.jumbotron img {
+  width: 50%;
+}
+
+#exploreBtn {
+  border: 2px solid black;
+  padding: 15px;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: var(--footer-color);
+  font-weight: bolder;
+  -webkit-animation-name: tada; 
+  animation-name: tada;
+}
+
+#exploreBtnHide {
+  visibility: hidden;
+  width: 50%;
+}
+
+/* animate */
+.animated {
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+  animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes tada { 
+  0% {
+    -webkit-transform: scale(1);
+  } 
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+  } 
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+  } 
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+  } 
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+  } 
+} 
+@keyframes tada { 
+  0% {
+    transform: scale(1);
+  } 
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg);
+  } 
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg);
+  } 
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg);
+    } 
+  100% {
+    transform: scale(1) rotate(0);
+  } 
+} 
+
+.fa-ello {
+  color: blue;
+}
+/* Bagian Content, Tulis codenya dibawah */
+
+.fa-dev {
+  color: red;
+}
+
+main {
+  margin-top: 20px;
+  background-color: var(--content-color);
+}
+
+main .judul {
+  padding: 15px;
+  text-align: center;
+}
+
+section#fighters {
+  display: flex;
+  padding: 15px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fighter-info {
+  padding: 10px;
+  text-align: left;
+  height: 150px;
+  font-size: 1.2rem;
+}
+
+.fighter-name {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.fighter-desc {
+  font-size: 1.1rem;
+}
+
+.fighter {
+  box-shadow: 0 0 8px rgb(0, 0, 0, .2);
+  width: calc(100% / 4);
+  padding: 15px;
+  margin: 15px;
+  background-color: var(--footer-color);
+  border-radius: 3px;
+}
+
+button.tmbl{
+  display: flex;
+  padding : 12px 24px;
+  color : white;
+  border-radius : 4px;
+  opacity: 0.8;
+  border: none;
+  margin: auto;
+}
+
+.pilih{
+  padding: 5px 10px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 5px #1a7940;
+}
+
+.pilih:active{
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.foto-fighter{
+  width : 100%;
+  margin : auto;
+}
+
+/* faq section */
+section#faq {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+section#faq img {
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Bagian Footer, Tulis codenya dibawah */
+footer {
+  background-color: var(--common-color);
+  height: auto;
+  width: 100%;
+  font-family: "Open Sans";
+  padding: 30px;
+  color: #f7f7f7;
+  display: flex;
+}
+.footer-content-left {
+  width: 50%;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  border-right: 2px solid #fff;
+}
+
+.footer-content-left h3 {
+  margin-bottom: 15px;
+}
+
+.footer-content-right {
+  width: 50%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.footer-content-right > p {
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+.Sosmed, .bootcamp-contributor {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.Sosmed li, .bootcamp-contributor li {
+  margin: 0 10px;
+}
+.bootcamp-contributor a {
+  color: #f7f7f7;
+}
+
+.Sosmed a {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+.Sosmed a i {
+  font-size: 1.1rem;
+}
+.Sosmed a:hover i{
+  color: aqua;
+}
+
+.footer-bottom {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+}
